@@ -1,0 +1,75 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Pure css tabs</title>
+	<link rel="stylesheet" type="text/css" href="Content/tabmenu_page_style.css">
+	<link rel="stylesheet" type="text/css" href="Content/tabmenu_js.css">
+	<script src="Scripts/tabmenu_js.js"></script>
+    <script type="text/javascript" src="Scripts/LoginHelper.js"></script>
+    <script type="text/javascript" src="Scripts/ContactLoader.js"></script>
+</head>
+<body>
+	<div class="page_header">
+		<H1>Page Header</H1>
+	</div>
+	
+	<div class="main_content">
+		<H2>You can register/login in the right menu bar</H2>
+	    <br/>
+	    <h2>Implemented (for custom Authentication Module):</h2>
+	    <ul>
+	        <li>Login/register/logout handlers</li>
+	        <li>Custom athentication system (using cookies)</li>
+	        <li>Simple filtering system for routes</li>
+	    </ul>
+	    <h2>Implemented (for generic handler)</h2>
+	    <ul>
+	        <li>returning in-memory collection as json collection</li>
+	    </ul>
+        <h2>Implemented (for custom .json handler)</h2>
+	    <ul>
+	        <li>return json text from .json file</li>
+	    </ul>
+        <h2>Needed to implement</h2>
+        <ul>
+            <li>show json data in treeView</li>
+        </ul>
+	</div>
+	
+	<div class="tab-menu">
+		<h3 class="tab-header tab-active" onclick="tabMenuClick(this)" id="login-tab">Login Menu</h3>
+	    <div class="tab-content tab-active" id="login-tab">
+	        <div id="login-register-block" class="hidden">
+	            <div>
+                    <p id="authentication-type-name"><b id="authentication-type-name-bold">Sign In</b> or </p>
+                    <input type="button" value="register" id="login-register-switch-button" />
+	            </div>
+	            <form id="login-register-form">
+	                <input name="username" value="Username" id="username-field"/>
+	                <input name="password" type="password" id="password-field"/>
+	                <input type="button" value="Login" id="login-button"/>
+	            </form>
+	        </div>
+
+            <input type="button" value="Logout" id="logout-button" />
+	    </div>
+
+	    <h3 class="tab-header hidden" onclick=" tabMenuClick(this) " id="json-text">Json text</h3>
+        <div class="tab-content" id="json-text">
+
+                <input type="button" value="GetJsonText" id="get-json-text-button"/>
+                <div id="json-text-container"></div>
+        </div>
+		
+        <h3 class="tab-header hidden" onclick="tabMenuClick(this)" id="json-tree">Json tree</h3>
+        <div class="tab-content" id="json-tree">
+            <ul>
+            </ul>
+        </div>
+	</div>
+	
+	<div class="page_footer">
+		<h3>Footer, 2015</h3>
+	</div>
+</body>
+</html>

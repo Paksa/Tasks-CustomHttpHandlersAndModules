@@ -1,0 +1,69 @@
+.tab-menu {
+    width: 350px;
+	border-bottom: solid silver;
+	position: relative;
+	background-color: silver;
+	padding: 0 5px 2px;
+	overflow: hidden;
+}
+
+/*make nested in TabMenu images fill TabMenu.Width*/
+.tab-menu img {
+	display: block;
+	width:100%;
+	height:auto;
+}
+
+
+.tab-menu >.tab-header {
+	display: inline-block;			/* make "tabs" take one line*/
+    border-bottom: 0;				
+    padding: 5px 10px;				/* align "tabs" text */
+    background-color:#ddd;
+	margin: 0;
+}
+
+.tab-menu > .tab-header.tab-active {
+	background-color:white;
+	border-top: solid red;
+    font-weight: bold;
+    margin-bottom: -1px;
+	display: inline-block !important;
+}
+
+/* Tab content style*/
+.tab-menu  > div.tab-content{
+    display: none;				/* by default tab not visible (exept active) */
+    background-color: white;
+	position:relative;
+    padding: 10px 10px;
+    overflow: overflow;			/* make content overflow if needed */
+	height: auto;
+	float: right;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.tab-menu > div.tab-content.tab-active {
+	display: block;
+}
+
+ /* highlight inactive tab when mouse moves over it */
+ .tab-menu > .tab-header:hover {
+	border-top: solid black;
+ }
+
+ .tab-menu li:hover {
+	background-color: #E0E0E0;
+ }
+ 
+ .tab-menu ul {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ .tab-menu li {
+	display: block;
+	padding: 0;
+	margin: 0 0 10px 0;
+ }

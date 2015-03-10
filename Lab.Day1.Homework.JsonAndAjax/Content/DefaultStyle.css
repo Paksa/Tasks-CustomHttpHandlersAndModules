@@ -1,0 +1,13 @@
+﻿.header {
+    display: block;
+}
+
+.main-content {
+    float: left;
+    width: 69.4%;
+}
+
+.right-sidebar {
+    float: right;
+    width: 29.5%;
+}
